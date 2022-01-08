@@ -1,5 +1,5 @@
 
-CpxAR2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\CpxAR_wMIp_test_4.csv",header=TRUE)
+CpxAR2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\CpxAR_wMIp_final_4.csv",header=TRUE)
 CpxAR2
 CpxAR2$MIp
 CpxAR2$dis
@@ -29,7 +29,7 @@ wMIp2 <- low_wMIpCpxAR2
 sMIp2 <- low_sMIpCpxAR2
 swMIp2 <- low_swMIpCpxAR2
 
-NarQP2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\NarQP_wMIp_test_4.csv",header=TRUE)
+NarQP2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\NarQP_wMIp_final_4.csv",header=TRUE)
 NarQP2
 NarQP2$MI
 HeatNarQP2<-matrix(NarQP2$MIp,nrow=40,ncol=40)
@@ -57,7 +57,7 @@ wMIp2 <- append(wMIp2, low_wMIpNarQP2, after = length(wMIp2))
 sMIp2 <- append(sMIp2, low_sMIpNarQP2, after = length(sMIp2))
 swMIp2 <- append(swMIp2, low_swMIpNarQP2, after = length(swMIp2))
 
-PhoRB2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\PhoRB_wMIp_test_4.csv",header=TRUE)
+PhoRB2<-read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\PhoRB_wMIp_final_4.csv",header=TRUE)
 PhoRB2
 PhoRB2$swMIp
 HeatPhoRB2<-matrix(PhoRB2$MIp,nrow=40,ncol=40)
@@ -85,7 +85,7 @@ wMIp2 <- append(wMIp2, low_wMIpPhoRB2, after = length(wMIp2))
 sMIp2 <- append(sMIp2, low_sMIpPhoRB2, after = length(sMIp2))
 swMIp2 <- append(swMIp2, low_swMIpPhoRB2, after = length(swMIp2))
 
-QseCB2<- read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\QseCB_wMIp_test_4.csv",header=TRUE)
+QseCB2<- read.csv("C:\\Users\\faits\\Documents\\GitHub\\MIp new\\QseCB_wMIp_final_4.csv",header=TRUE)
 QseCB2
 QseCB2$MIp
 HeatQseCB2<-matrix(QseCB2$MIp,nrow=40,ncol=40)
@@ -114,7 +114,7 @@ wMIp2 <- append(wMIp2, low_wMIpQseCB2, after = length(wMIp2))
 sMIp2 <- append(sMIp2, low_sMIpQseCB2, after = length(sMIp2))
 swMIp2 <- append(swMIp2, low_swMIpQseCB2, after = length(swMIp2))
 
-filter.CpxAR2<-which(CpxAR2$swMIp>0.041387259,arr.ind=TRUE)
+filter.CpxAR2<-which(CpxAR2$swMIp>0.041116691,arr.ind=TRUE)
 pp <- CpxAR2[filter.CpxAR2,1]
 pp <- append(pp, CpxAR2[filter.CpxAR2,2], after = length(pp))
 pp <- append(pp, CpxAR2[filter.CpxAR2,14], after = length(pp))
@@ -135,8 +135,8 @@ pp <- append(pp, qq[filter.CpxAR2_y,3], after = length(pp))
 pp <- append(pp, qq[filter.CpxAR2_y,4], after = length(pp))
 qq <- matrix(pp,nrow=length(filter.CpxAR2_y),4)
 qq
-028191133
-filter.NarQP2<-which(NarQP2$swMIp>0.041387259,arr.ind=TRUE)
+
+filter.NarQP2<-which(NarQP2$swMIp>0.028285871,arr.ind=TRUE)
 pp1 <- NarQP2[filter.NarQP2,1]
 pp1 <- append(pp1, NarQP2[filter.NarQP2,2], after = length(pp1))
 pp1 <- append(pp1, NarQP2[filter.NarQP2,14], after = length(pp1))
@@ -158,7 +158,7 @@ pp1 <- append(pp1, qq1[filter.NarQP2_y,4], after = length(pp1))
 qq1 <- matrix(pp1,nrow=length(filter.NarQP2_y),4)
 qq1
 
-filter.PhoRB2<-which(PhoRB2$swMIp>0.041387259,arr.ind=TRUE)
+filter.PhoRB2<-which(PhoRB2$swMIp>0.041116691,arr.ind=TRUE)
 pp2 <- PhoRB2[filter.PhoRB2,1]
 pp2 <- append(pp2, PhoRB2[filter.PhoRB2,2], after = length(pp2))
 pp2 <- append(pp2, PhoRB2[filter.PhoRB2,14], after = length(pp2))
@@ -180,7 +180,7 @@ pp2 <- append(pp2, qq2[filter.PhoRB2_y,4], after = length(pp2))
 qq2 <- matrix(pp2,nrow=length(filter.PhoRB2_y),4)
 qq2
 
-filter.QseCB2<-which(QseCB2$swMIp>0.041387259,arr.ind=TRUE)
+filter.QseCB2<-which(QseCB2$swMIp>0.041116691,arr.ind=TRUE)
 pp3 <- QseCB2[filter.QseCB2,1]
 pp3 <- append(pp3, QseCB2[filter.QseCB2,2], after = length(pp3))
 pp3 <- append(pp3, QseCB2[filter.QseCB2,14], after = length(pp3))
@@ -194,7 +194,7 @@ pp3 <- append(pp3, qq3[filter.QseCB2_x,3], after = length(pp3))
 pp3 <- append(pp3, qq3[filter.QseCB2_x,4], after = length(pp3))
 qq3 <- matrix(pp3,nrow=length(filter.QseCB2_x),4)
 #qq3
-filter.QseCB2_y<-which(qq3[,2]>528,arr.ind=TRUE)
+filter.QseCB2_y<-which(qq3[,2]>628,arr.ind=TRUE)
 pp3 <- qq3[filter.QseCB2_y,1]
 pp3 <- append(pp3, qq3[filter.QseCB2_y,2], after = length(pp3))
 pp3 <- append(pp3, qq3[filter.QseCB2_y,3], after = length(pp3))
@@ -247,9 +247,9 @@ abline(v=0.016360208, col="green")
 
 x11()
 plot(swMIp2,Dis2, ylab='minimal backbone residue distance', xlab='MRI')
-#abline(v=0.015025222, col="red")
-#abline(v=0.018766703, col="green")
-#abline(v=0.028191133, col="yellow")
+#abline(v=0.018144743, col="red")
+#abline(v=0.022462373, col="green")
+#abline(v=0.028285871, col="yellow")
 abline(v=0.041387259, col="red")
 
 points(swMIp2, Dis2)
