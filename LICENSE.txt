@@ -1,0 +1,50 @@
+This End-User License Agreement (EULA) is a legal agreement between you (either as 
+an individual or on behalf of an entity) and Eduardo Mauricio Martin ("The Author")
+regarding your use of the algorithms and associated documentation ("The Software"). 
+IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS EULA, DO NOT INSTALL, USE OR COPY 
+THE SOFTWARE.
+
+The Agreement
+By downloading, installing, using, or copying the Software, you accept and agree to 
+be bound by the terms of this EULA. If you do not agree to all of the terms of this 
+EULA, you may not download, install, use or copy the Software.
+
+The License
+This EULA entitles you to install the Software as you want, and use the Software for 
+any lawful purpose consistent with this EULA. Your license to use the Software is 
+expressly conditioned upon your agreement to all of the terms of this EULA. This 
+software is licensed, not sold. The author reserves all other rights not granted by 
+this EULA. The Software is part of an article called "Two-component systems interface
+discrimination in Actinobacillus pleuropneumoniae" and its intended use is for the 
+reviewers to have available the Software to analize results. 
+
+Restrictions 
+1. You may not publish in its entirety or subtantial portions of the Software as your 
+   own.
+2. When using the Software you must use it in a manner that complies with the 
+   applicable laws in the jurisdiction(s) in which you use the Software.
+3. You may not sell, resell, rent, lease or exchange the Software for anything of 
+   value.
+4. You may redistribute the software, but it must include this EULA and you may not 
+   repackage or bundle the Software with any other software.
+5. You may not remove or alter any proprietary notices or marks on the Software.
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This EULA constitutes the entire agreement between you and The Author and governs your
+use of the Software, superseding any prior agreements between you and the Author 
+(including, but not limited to, any prior versions of the EULA).
+
+You agree that this EULA and your use of the Software are governed under Mexican law 
+and any dispute related to the Software must be brought in a tribunal of competent 
+jurisdiction located in or near Aguascalientes, Aguascalientes, Mexico.
+
+
