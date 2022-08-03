@@ -271,18 +271,16 @@ numpy.savetxt(save, APCmatrix, delimiter=",", fmt='%s')  # crea un csv de la mat
 
 print("-------------- A V E R A G E  P R O D U C T  C O R R E C T I O N ------------------\nDone")
 
-# print(MImatrix1)
-# print('space')
-# print(APCmatrix)
+
 
 MIp = 0
 MIpmatrix = numpy.zeros((len(alignment[0]), len(alignment[0])))
 
 for i in range(0, n):
     for j in range(0, n):
-        # print (i,j)
+
         MIp = MImatrix1[i, j] - APCmatrix[i, j]
-        # print(MImatrix1[i, j], APCmatrix[i, j], MIp)
+
         MIpmatrix[i, j] = MIp
         MIpmatrix[j, i] = MIp
 save = '{}_MIp_matrix_4.csv'.format(file[:6])
@@ -295,9 +293,9 @@ wMIpmatrix = numpy.zeros((len(alignment[0]), len(alignment[0])))
 
 for i in range(0, n):
     for j in range(0, n):
-        # print (i,j)
+
         wMIp = MIpmatrix[i, j] * weight_matrix[i, j]
-        # print(MImatrix1[i, j], APCmatrix[i, j], MIp)
+
         wMIpmatrix[i, j] = wMIp
         wMIpmatrix[j, i] = wMIp
 save = '{}_wMIp_matrix_4.csv'.format(file[:6])
@@ -324,4 +322,3 @@ for i in range(len(alignment[0])):
                                                             round(wMIpmatrix[i, j], 5))
             f.write(line)
 f.close()
-# print (MIpmatrix)
