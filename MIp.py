@@ -3,9 +3,8 @@ import numpy
 import math
 
 
-counter = [["A", 0], ["C", 0], ["D", 0], ["E", 0], ["F", 0], ["G", 0], ['H', 0], ["I", 0],
-           ["K", 0], ["L", 0], ["M", 0], ["N", 0], ["P", 0], ["Q", 0], ["R", 0], ["S", 0],
-           ["T", 0], ["V", 0], ["W", 0], ["Y", 0], ["Gap", 0]]
+counter = [["A", 0], ["C", 0], ["D", 0], ["E", 0], ["F", 0], ["G", 0], ['H', 0], ["I", 0], ["K", 0], ["L", 0], ["M", 0],
+           ["N", 0], ["P", 0], ["Q", 0], ["R", 0], ["S", 0], ["T", 0], ["V", 0], ["W", 0], ["Y", 0], ["Gap", 0]]
 
 countresults = []
 probabilities = []
@@ -17,14 +16,11 @@ aminoacids = ["Ala", "Cys", "Glu", "Asp", "Phe", "Gly", "His", "Iso", "Lys", "Le
 
 file = 'NarQP_NR_concatenated_alignment_2.fa'
 
-
 alignments = AlignIO.parse(open(file, "r+"), "fasta")
 
 for alignment in alignments:
     print(alignment)
 
-
-# print("Cadena resultante de la posición: ", alignment[:, 0])  #muestra la composicion en aa de una columna
 print("longitud de las secuencias:", str(alignment.get_alignment_length()))
 
 i = 0
@@ -65,7 +61,6 @@ for loop in range(0, alignment.get_alignment_length()):  # Recorrer las columnas
 
     i = i + 1
 
-
 print("-------------- F R E Q U E N C I E S ------------------\nDone")
 
 probabilities = countresults
@@ -79,11 +74,7 @@ for i in range(0, alignment.get_alignment_length()):
 
         probabilities[i][j] = countresults[i][j] / (len(alignment[:, 0]) - countresults[i][21])
 
-
-
 print("-------------- P R O B A B I L I T I E S ------------------\nDone")
-
-
 
 shannonentropies = probabilities
 m = 0
@@ -128,7 +119,6 @@ for result in shannonentropies:
     k = 1
 
 print("-------------- T O T A L  E N T R O P I E S ------------------\nDone")
-
 
 AAindex = [["A", 0], ["C", 1], ["D", 2], ["E", 3], ["F", 4], ["G", 5], ['H', 6], ["I", 7],
            ["K", 8], ["L", 9], ["M", 10], ["N", 11], ["P", 12], ["Q", 13], ["R", 14], ["S", 15],
