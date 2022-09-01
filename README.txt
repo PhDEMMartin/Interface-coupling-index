@@ -120,19 +120,37 @@ you are familiarized with the amino acid three letter code you will detect them 
 
 12. Run $ python3 AA_min_distance.py, the program will return the minimum distance between amino acid pairs in the
 interface. This distance will be used to divide the absolute distance between amino acid pairs in the interface, a more
-detailed explanation about it can be found in the paper "Two-component systems interface discrimination in
-Actinobacillus pleuropneumoniae" currently under reviewing process.
+detailed explanation about adjusted minimal distance (amd) can be found in the paper "Two-component systems interface
+discrimination in Actinobacillus pleuropneumoniae" currently under review process.
 
 To obtain the Interface coupling index additional manual processing is required so far, though in the near future it
 will be fully automated.
 
 13. In the file ending as *wMIp_final_4[*].csv from point 7, you will need to enter the distance values for each pair.
 The file should contain m = n^2 lines when n = number of amino acids in the interface, therefore the values for each
-amino acid with itself must be added, add these entries either as NA or 0. Three additional headers have to be added
+amino acid with itself must be added, add the values for this entries as NA. Three additional headers have to be added
 dis, amd, and ICI,  which are distance between amino acids, adjusted minimal distance, and interface coupling index.
 
+For column amd divide each of the distance values by the minimum distance between amino acid pairs in the interface
+returned by 12.
 
+For column ICI the amino acid pair's wMIp value has to be divided by the amino acid pair's amd, a far more detailed
+explanation about these parameter can be found in the paper "Two-component systems interface discrimination in
+Actinobacillus pleuropneumoniae" currently under review process.
 
+This must be done for each orthologue protein heterodimer your are trying to evaluate.
+
+14. In the file MIp,_wMIp,_and_ICI_plots.R under File routes the name of the heterodimer and the complete route to the
+*wMIp_final_4[*].csv. Under each data acquisition it will be needed to rebrand everything according to the name of the
+heterodimers being use, moreover if you have more than 4 systems it will be required to add the acquisition process for
+each additional system.
+
+Under each filtering threshold the system's name must be rebranded with the correct number and name of your
+heterodimers, add additional filtering process blocks if needed. Additionally it will be needed to change the filtering
+values so that the amino acid positions correspond to each of the two different proteins.
+
+15. Run the R script, if everything was made right it should return a plot comparing MIp and wMIp vs distance and a second
+plot with ICI vs distance with the interprotein amino acid pairs above the threshold in different colors.
 
 Authors and history
 ---------------------------
