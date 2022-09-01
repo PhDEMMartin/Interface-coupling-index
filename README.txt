@@ -80,12 +80,12 @@ sequence's  relative position in the multiple sequence alignment. The program wi
 name with the header in the interface residue list, as the files were named by the complexed proteins that were worked
 with i.e. CpxAR.fa will try to match with a CpxAR header.
 
-6. Enter the file's name to be worked with in line 110 of the PII retriever.py, the file must be in the same folder
+6. Enter the file's name to be worked with in line 110 of the PII_retriever.py, the file must be in the same folder
 where the software was downloaded or point the complete file's route. This file is one of the output files from 4.
 exactly *_MIp_detailed.csv file, these file contains all the alignment information by positions pair. Do the same for
-the file that contains the relative position of the interface residues, but now in line 111 of the PII retriever file.
+the file that contains the relative position of the interface residues, but now in line 111 of the PII_retriever file.
 
-7. Run $ python3 PII retriever.py.
+7. Run $ python3 PII_retriever.py.
 
 This program will return a file ending as *wMIp_final_4[*].csv that will contain the information of the residues in the
 prototypical interaction interface of the heterodimer you are working with. The output file will be named according to
@@ -149,8 +149,8 @@ Under each filtering threshold the system's name must be rebranded with the corr
 heterodimers, add additional filtering process blocks if needed. Additionally it will be needed to change the filtering
 values so that the amino acid positions correspond to each of the two different proteins.
 
-15. Run the R script, if everything was made right it should return a plot comparing MIp and wMIp vs distance and a second
-plot with ICI vs distance with the interprotein amino acid pairs above the threshold in different colors.
+15. Run the R script, if everything was made right it should return a plot comparing MIp and wMIp vs distance and a
+second plot with ICI vs distance with the interprotein amino acid pairs above the threshold in different colors.
 
 Authors and history
 ---------------------------
