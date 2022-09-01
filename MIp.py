@@ -2,6 +2,7 @@ from Bio import AlignIO
 import numpy
 import math
 
+file = 'NarQP_NR_concatenated_alignment_2.fa'
 
 counter = [["A", 0], ["C", 0], ["D", 0], ["E", 0], ["F", 0], ["G", 0], ['H', 0], ["I", 0], ["K", 0], ["L", 0], ["M", 0],
            ["N", 0], ["P", 0], ["Q", 0], ["R", 0], ["S", 0], ["T", 0], ["V", 0], ["W", 0], ["Y", 0], ["Gap", 0]]
@@ -13,8 +14,6 @@ totalentropies = []
 
 aminoacids = ["Ala", "Cys", "Glu", "Asp", "Phe", "Gly", "His", "Iso", "Lys", "Leu", "Met", "Asn", "Pro", "Gln", "Arg",
               "Ser", "Thr", "Val", "Trp", "Tyr", "Gap"]
-
-file = 'NarQP_NR_concatenated_alignment_2.fa'
 
 alignments = AlignIO.parse(open(file, "r+"), "fasta")
 
@@ -83,16 +82,12 @@ n = 0
 for element in probabilities:
 
     for loop in range(1, 21):
-        # print('m', m)
-        # print('n', n)
+
         if element[m] == 0.0:
             shannonentropies[n][m] = 0
 
         elif element[m] == 0:
             shannonentropies[n][m] = 0
-
-        # elif element[m] == 1.0:                                                   #Gets rid of the negative zero
-        #     shannonentropies[n][m] = 0
 
         else:
             shannonentropies[n][m] = (-1 * element[m] * (math.log(element[m], 20)))  # Returns entropy for each position
@@ -110,7 +105,6 @@ totalentropy = 0
 for result in shannonentropies:
 
     for loop in range(1, 21):
-        # print('k', k)
         totalentropy = totalentropy + result[k]
         k = k + 1
 
@@ -256,7 +250,7 @@ for i in range(0, n):
             APCmatrix[i, j] = APC
             APCmatrix[j, i] = APC
 
-save = '{}_APC_matrix_4.csv'.format(file[:6])
+save = '{}_APC_matrix_4.csv'.format(file[:5])
 numpy.savetxt(save, APCmatrix, delimiter=",", fmt='%s')  # crea un csv de la matriz
 
 print("-------------- A V E R A G E  P R O D U C T  C O R R E C T I O N ------------------\nDone")
@@ -273,8 +267,8 @@ for i in range(0, n):
 
         MIpmatrix[i, j] = MIp
         MIpmatrix[j, i] = MIp
-save = '{}_MIp_matrix_4.csv'.format(file[:6])
-numpy.savetxt(save, MIpmatrix, delimiter=";", fmt='%s')  # crea un csv de la matriz
+save = '{}_MIp_matrix_4.csv'.format(file[:5])
+numpy.savetxt(save, MIpmatrix, delimiter=",", fmt='%s')  # crea un csv de la matriz
 
 print("-------------- M I p ------------------\nDone")
 
@@ -288,21 +282,21 @@ for i in range(0, n):
 
         wMIpmatrix[i, j] = wMIp
         wMIpmatrix[j, i] = wMIp
-save = '{}_wMIp_matrix_4.csv'.format(file[:6])
-numpy.savetxt(save, wMIpmatrix, delimiter=";", fmt='%s')  # crea un csv de la matriz
+save = '{}_wMIp_matrix_4.csv'.format(file[:5])
+numpy.savetxt(save, wMIpmatrix, delimiter=",", fmt='%s')  # crea un csv de la matriz
 
 print("-------------- w M I p ------------------\nDone")
 
 print('Processing output file')
 
-save = '{}_MIp_detailed_4.csv'.format(file[:6])
+save = '{}_MIp_detailed_4.csv'.format(file[:5])
 f = open(save, "a")
-f.write('aa_x;aa_y;h_x;h_y;h_xy;MI;APC;MIp;w;wMIp\n')
+f.write('aa_x,aa_y,h_x,h_y,h_xy,MI,APC,MIp,w,wMIp\n')
 
 for i in range(len(alignment[0])):
     for j in range(len(alignment[0])):
         if i != j:
-            line = '{};{};{};{};{};{};{};{};{};{}\n'.format(i+1, j+1, round(totalentropies[i][1], 5),
+            line = '{},{},{},{},{},{},{},{},{},{}\n'.format(i+1, j+1, round(totalentropies[i][1], 5),
                                                             round(totalentropies[j][1], 5),
                                                             round(joint_entropy[i, j], 5),
                                                             round(MImatrix1[i, j], 5),
